@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
     ArrayList<String> nameArray = new ArrayList<>();
     ArrayList<String> infoArray = new ArrayList<>();
 
+    ArrayList<PlayerCharacter> characterArray = new ArrayList<>();
+
     ListView listView;
     Button addNew;
 
@@ -28,6 +30,11 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
 
         nameArray.add("Mira");
         infoArray.add("Wandering peasant");
+
+        characterArray.add(new PlayerCharacter());
+        characterArray.get(0).setName("Jeff");
+        characterArray.get(0).setInfo("King");
+
         initList();
 
         listView.setOnItemClickListener(new OnItemClickListener() {
@@ -35,8 +42,10 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, CharacterMainPage.class);
 //                String message = nameArray[position];
-                String message = nameArray.get(position);
-                intent.putExtra("name", message);
+//                String message = nameArray.get(position);
+                PlayerCharacter tmpChar = characterArray.get(position);
+                intent.putExtra("name", tmpChar);
+                intent.putExtra("myChar", tmpChar);
                 startActivity(intent);
             }
         });
@@ -50,8 +59,14 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
         });
     }
 
+//    public void initList() {
+//        ListAdapter myList = new ListAdapter(this, nameArray, infoArray);
+//        listView = (ListView) findViewById(R.id.characterListView);
+//        listView.setAdapter(myList);
+//    }
+
     public void initList() {
-        ListAdapter myList = new ListAdapter(this, nameArray, infoArray);
+        ListAdapter myList = new ListAdapter(this, characterArray);
         listView = (ListView) findViewById(R.id.characterListView);
         listView.setAdapter(myList);
     }
@@ -64,8 +79,12 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
     @Override
     public void passText(String name, String info) {
         //CREATE NEW CHARACTER HERE AND ADD NAME AND INFO
-        nameArray.add(name);
-        infoArray.add(info);
+        PlayerCharacter tmpChar = new PlayerCharacter();
+        tmpChar.setName(name);
+        tmpChar.setInfo(info);
+        characterArray.add(tmpChar);
+//        nameArray.add(name);
+//        infoArray.add(info);
         initList();
     }
 }
