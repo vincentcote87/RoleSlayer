@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class CharacterMainPage extends AppCompatActivity {
 
+    protected Intent savedExtra;
     Button basicsBtn;
     Button statsBtn;
     Button skillsBtn;
@@ -22,9 +23,11 @@ public class CharacterMainPage extends AppCompatActivity {
         setContentView(R.layout.activity_character_main_page);
 
         //PASS PLAYERCHARACTER OBJECT
-        String savedExtra = getIntent().getStringExtra("name");
+//        String savedExtra = getIntent().getStringExtra("myChar");
+        savedExtra = getIntent();
+        PlayerCharacter playerChar = savedExtra.getParcelableExtra("myChar");
         TextView myText = (TextView) findViewById(R.id.mainPageCharName);
-        myText.setText(savedExtra);
+        myText.setText(playerChar.getName());
 
         basicsBtn = (Button)findViewById(R.id.basicsBtn);
         statsBtn = (Button)findViewById(R.id.statsBtn);
