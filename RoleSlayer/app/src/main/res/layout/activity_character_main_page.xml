@@ -4,19 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CharacterMainPage">
+    tools:context=".CharacterBasics">
 
     <TextView
-        android:id="@+id/textID"
-        android:layout_width="0dp"
+        android:id="@+id/mainPageCharName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/basicsBtn"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/basicsHeader"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainPageCharName" />
+
+    <Button
+        android:id="@+id/statsBtn"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="24sp"
+        android:text="@string/statsHeader"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/basicsBtn" />
+
+    <Button
+        android:id="@+id/skillsBtn"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/skillsHeader"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsBtn" />
+
+    <Button
+        android:id="@+id/advDisadvBtn"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/advDisadHeader"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skillsBtn" />
+
+    <Button
+        android:id="@+id/inventoryBtn"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/inventoryHeader"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advDisadvBtn" />
+
+    <Button
+        android:id="@+id/notesBtn"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/notesHeader"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryBtn" />
+
 </android.support.constraint.ConstraintLayout>
