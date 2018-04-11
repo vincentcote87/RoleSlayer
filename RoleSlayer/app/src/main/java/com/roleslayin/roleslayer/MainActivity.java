@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
 
     ArrayList<String> nameArray = new ArrayList<>();
     ArrayList<String> infoArray = new ArrayList<>();
-//    String[] nameArray = {"Vincent", "Graham", ""};
-//    String[] infoArray = {"Male 30", "Male 27", ""};
 
     ListView listView;
     Button addNew;
@@ -28,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        nameArray.add("Mira");
+        infoArray.add("Wandering peasant");
         initList();
 
         listView.setOnItemClickListener(new OnItemClickListener() {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
                 Intent intent = new Intent(MainActivity.this, CharacterMainPage.class);
 //                String message = nameArray[position];
                 String message = nameArray.get(position);
-                intent.putExtra("animal", message);
+                intent.putExtra("name", message);
                 startActivity(intent);
             }
         });
