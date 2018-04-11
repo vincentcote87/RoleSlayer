@@ -1,5 +1,7 @@
 package com.example.slayerinc.roleslayer;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,9 @@ public class CharList extends AppCompatActivity {
     private EditText nameInput;
     public PlayerCharacter myCharacter;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +27,8 @@ public class CharList extends AppCompatActivity {
         submitName = (Button)findViewById(R.id.submitName);
         displayName = (TextView)findViewById(R.id.displayName);
         nameInput = (EditText)findViewById(R.id.nameInput);
+
+        nameInput.setEnabled(false);
 
         submitName.setOnClickListener(new View.OnClickListener() {
             @Override
