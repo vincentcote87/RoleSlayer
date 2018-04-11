@@ -1,5 +1,10 @@
 public class Skill {
     // Data members
 
-    String name;
+    String name, attribute;
+    int difficulty, level;
+
+    // Methods
+
+
 }

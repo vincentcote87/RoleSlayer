@@ -7,6 +7,11 @@ import java.util.ArrayList;
 public class PlayerCharacter {
     // Data Members
 
+    // Constants
+    static final int ST_PTS=10, DX_PTS=20, IQ_PTS=20, HT_PTS=10;
+    static final int HP_PTS=2, WIL_PTS=5, PER_PTS=5, FP_PTS=3;
+    static final int BS_PTS=5, BM_PTS=5;
+
     // Basics
     String name, race, age, sex, height, weight, description;
 
@@ -27,9 +32,20 @@ public class PlayerCharacter {
     // Notes
     ArrayList<String> notes;
 
+    //Other
+    int build_points=0;
+
     // Methods
 
     PlayerCharacter() {
+        calcSpeed();
+        calcLift();
+
+    }
+
+    PlayerCharacter(String n)
+    {
+        name = n;
         calcSpeed();
         calcLift();
 
@@ -43,6 +59,11 @@ public class PlayerCharacter {
 
     void calcLift()
     {
-        // TO IMPLEMENT
+        basic_lift = (st * st) / 5;
+    }
+
+    void setSt(int score)
+    {
+
     }
 }
