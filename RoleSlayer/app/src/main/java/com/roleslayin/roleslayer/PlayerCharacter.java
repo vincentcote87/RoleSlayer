@@ -1,8 +1,4 @@
-package com.example.slayerinc.roleslayer;
-
-/**
- * Created by vincentcote on 2018-03-26.
- */
+package com.roleslayin.roleslayer;
 
 public class PlayerCharacter {
     String name;
