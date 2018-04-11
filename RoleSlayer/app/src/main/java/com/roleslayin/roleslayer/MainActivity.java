@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements EnterCharNameDialog.EnterNewCharListener {
 
-    ArrayList<String> names = new ArrayList<>();
-    int howBig = names.size();
-    String[] nameArray = {"Vincent", "Graham", ""};
-    String[] infoArray = {"Male 30", "Male 27", ""};
+    ArrayList<String> nameArray = new ArrayList<>();
+    ArrayList<String> infoArray = new ArrayList<>();
+//    String[] nameArray = {"Vincent", "Graham", ""};
+//    String[] infoArray = {"Male 30", "Male 27", ""};
 
     ListView listView;
     Button addNew;
@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, CharacterMainPage.class);
-                String message = nameArray[position];
+//                String message = nameArray[position];
+                String message = nameArray.get(position);
                 intent.putExtra("animal", message);
                 startActivity(intent);
             }
@@ -63,8 +64,8 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
     @Override
     public void passText(String name, String info) {
         //CREATE NEW CHARACTER HERE AND ADD NAME AND INFO
-        nameArray[2] = name;
-        infoArray[2] = info;
+        nameArray.add(name);
+        infoArray.add(info);
         initList();
     }
 }
