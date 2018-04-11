@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
 //                String message = nameArray[position];
 //                String message = nameArray.get(position);
                 PlayerCharacter tmpChar = characterArray.get(position);
-                intent.putExtra("name", tmpChar);
+//                intent.putExtra("name", tmpChar);
                 intent.putExtra("myChar", tmpChar);
                 startActivity(intent);
             }
