@@ -7,18 +7,18 @@ import java.io.IOError;
 import java.util.ArrayList;
 
 public class PlayerCharacter implements Parcelable {
-    String name = "";
-    String info = "";
 
 
+    private String name = "";
+    private String info = "";
+    private String race = "";
+    private String sex = "";
+    private String description = "";
+    private String playerNotes = "";
 
-    String race = "";
-    String sex = "";
-    String description = "";
-
-    Integer age = 0;
-    Integer HT = 0;
-    Integer WT = 0;
+    private Integer age = 0;
+    private Integer HT = 0;
+    private Integer WT = 0;
 
     ArrayList<CharacterItem> inventory = new ArrayList<>();
 
@@ -48,12 +48,14 @@ public class PlayerCharacter implements Parcelable {
         public PlayerCharacter createFromParcel(Parcel in) {
             return new PlayerCharacter(in);
         }
+
         public PlayerCharacter[] newArray(int size) {
             return new PlayerCharacter[size];
         }
     };
 
-    public PlayerCharacter() {}
+    public PlayerCharacter() {
+    }
 
     private PlayerCharacter(Parcel in) {
         name = in.readString();
@@ -69,6 +71,7 @@ public class PlayerCharacter implements Parcelable {
     public void setName(String name) {
         this.name = name;
     }
+
     public void setInfo(String info) {
         this.info = info;
     }
@@ -76,9 +79,11 @@ public class PlayerCharacter implements Parcelable {
     public String getName() {
         return name;
     }
+
     public String getInfo() {
         return info;
     }
+
     public String getRace() {
         return race;
     }
@@ -125,6 +130,14 @@ public class PlayerCharacter implements Parcelable {
 
     public void setWT(Integer WT) {
         this.WT = WT;
+    }
+
+    public String getPlayerNotes() {
+        return playerNotes;
+    }
+
+    public void setPlayerNotes(String playerNotes) {
+        this.playerNotes = playerNotes;
     }
 }
 

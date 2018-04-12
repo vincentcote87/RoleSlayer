@@ -15,14 +15,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements EnterCharNameDialog.EnterNewCharListener {
 
-//    ArrayList<String> nameArray = new ArrayList<>();
-//    ArrayList<String> infoArray = new ArrayList<>();
-//    public ArrayList<PlayerCharacter> characterArray;
-//
-//    public MainActivity() {
-//        characterArray = new ArrayList<>();
-//    }
-
     ListView listView;
     Button addNew;
 
@@ -30,9 +22,6 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        nameArray.add("Mira");
-//        infoArray.add("Wandering peasant");
 
         ((MyApplication)this.getApplicationContext()).characterArray.add(new PlayerCharacter());
         ((MyApplication)this.getApplicationContext()).characterArray.get(0).setName("Austenberger");
@@ -48,8 +37,6 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, CharacterMainPage.class);
-//                PlayerCharacter tmpChar = characterArray.get(position);
-//                intent.putExtra("myChar", characterArray.get(position));
                 intent.putExtra("index", position);
                 startActivity(intent);
             }
@@ -77,13 +64,10 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
 
     @Override
     public void passText(String name, String info) {
-        //CREATE NEW CHARACTER HERE AND ADD NAME AND INFO
         PlayerCharacter tmpChar = new PlayerCharacter();
         tmpChar.setName(name);
         tmpChar.setInfo(info);
         ((MyApplication)this.getApplicationContext()).characterArray.add(tmpChar);
-//        nameArray.add(name);
-//        infoArray.add(info);
         initList();
     }
 

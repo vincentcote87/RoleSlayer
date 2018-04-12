@@ -55,6 +55,15 @@ public class CharacterMainPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        notesBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CharacterMainPage.this, CharacterNotesPage.class);
+                intent.putExtra("index", index);
+                startActivity(intent);
+            }
+        });
     }
 
     private void passIntent(Class x, PlayerCharacter pc) {
