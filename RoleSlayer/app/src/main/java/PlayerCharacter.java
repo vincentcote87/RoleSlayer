@@ -11,9 +11,9 @@ public class PlayerCharacter implements Parcelable
 {
     // Data Members
 
-    // Constants
-    static final int ST_PTS=10, DX_PTS=20, IQ_PTS=20, HT_PTS=10;
-    static final int HP_PTS=2, WIL_PTS=5, PER_PTS=5, FP_PTS=3;
+    // (build points)
+//    static final int ST_PTS=10, DX_PTS=20, IQ_PTS=20, HT_PTS=10;
+//    static final int HP_PTS=2, WIL_PTS=5, PER_PTS=5, FP_PTS=3;
 //    static final int BS_PTS=5, BM_PTS=5;
 
     // Basics
@@ -26,31 +26,55 @@ public class PlayerCharacter implements Parcelable
     String thrust, swing;
 
     // Perks/Quirks
-    ArrayList<String> advantages, disadvantages;
+//    ArrayList<String> advantages, disadvantages;
 
     // Skills
     ArrayList<Skill> skills;
 
     // Inventory
     ArrayList<Item> inventory;
+    int total_weight;
 
     // Notes
-    ArrayList<String> notes;
+    String notes;
 
     //Other
-    int build_points=0;
+//    int build_points=0;
 
     // Methods
 
     PlayerCharacter() {
         calcSpeed();
         calcLift();
+        calcDmg();
 
     }
 
     private PlayerCharacter(Parcel in) {
         name = in.readString();
-        // ETC
+        race = in.readString();
+        age = in.readString();
+        sex = in.readString();
+        height = in.readString();
+        weight = in.readString();
+        description = in.readString();
+        st = in.readInt();
+        dx = in.readInt();
+        iq = in.readInt();
+        ht = in.readInt();
+        hp = in.readInt();
+        wil = in.readInt();
+        per = in.readInt();
+        fp = in.readInt();
+        basic_lift = in.readInt();
+        basic_move = in.readInt();
+        basic_speed = in.readFloat();
+        thrust = in.readString();
+        swing = in.readString();
+        skills = new ArrayList<Skill>();
+        in.readList(skills,null);
+        inventory = new ArrayList<Item>();
+        in.readList(inventory, null);
     }
 
     PlayerCharacter(String n)
@@ -174,7 +198,7 @@ public class PlayerCharacter implements Parcelable
     void setSt(int score)
     {
         int diff = score - st;
-        build_points += diff * ST_PTS;
+//        build_points += diff * ST_PTS;
         st = score;
         calcLift();
         calcDmg();
@@ -183,8 +207,8 @@ public class PlayerCharacter implements Parcelable
 
     void setDx(int score)
     {
-        int diff = score - dx;
-        build_points += diff * DX_PTS;
+//        int diff = score - dx;
+//        build_points += diff * DX_PTS;
         dx = score;
         calcSpeed();
         calcSkills("dx", dx);
@@ -193,7 +217,7 @@ public class PlayerCharacter implements Parcelable
     void setIq(int score)
     {
         int diff = score - iq;
-        build_points += diff * IQ_PTS;
+//        build_points += diff * IQ_PTS;
         iq = score;
         calcSkills("iq", iq);
         setWil(wil + diff);
@@ -203,7 +227,7 @@ public class PlayerCharacter implements Parcelable
     void setHt(int score)
     {
         int diff = score - ht;
-        build_points += diff * HT_PTS;
+//        build_points += diff * HT_PTS;
         ht = score;
         calcSpeed();
         calcSkills("ht", ht);
@@ -212,35 +236,35 @@ public class PlayerCharacter implements Parcelable
 
     void setHp(int score)
     {
-        int diff = score - hp;
-        build_points += diff * HP_PTS;
+//        int diff = score - hp;
+//        build_points += diff * HP_PTS;
         hp = score;
     }
 
     void setWil(int score)
     {
-        int diff = score - wil;
-        build_points += diff * WIL_PTS;
+//        int diff = score - wil;
+//        build_points += diff * WIL_PTS;
         wil = score;
         calcSkills("wil", wil);
     }
 
     void setPer(int score)
     {
-        int diff = score - per;
-        build_points += diff * PER_PTS;
+//        int diff = score - per;
+//        build_points += diff * PER_PTS;
         per = score;
         calcSkills("per", per);
     }
 
     void setFp(int score)
     {
-        int diff = score - fp;
-        build_points += diff * FP_PTS;
+//        int diff = score - fp;
+//        build_points += diff * FP_PTS;
         fp = score;
     }
 
-    void addAdvantage(String name, int pts)
+/*    void addAdvantage(String name, int pts)
     {
 
     }
@@ -249,6 +273,7 @@ public class PlayerCharacter implements Parcelable
     {
 
     }
+*/
 
     @Override
     public int describeContents() {

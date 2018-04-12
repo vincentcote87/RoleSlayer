@@ -12,7 +12,6 @@ public class Skill {
         attribute = stat;
         difficulty = diff;
         relative_level = rlInit(difficulty);
-        // 1 build point -- how to pass back?
         calculate(base);
     }
 
