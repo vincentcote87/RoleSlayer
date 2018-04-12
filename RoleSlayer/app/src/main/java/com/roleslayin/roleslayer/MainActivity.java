@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
         infoArray.add("Wandering peasant");
 
         characterArray.add(new PlayerCharacter());
-        characterArray.get(0).setName("Jeff");
-        characterArray.get(0).setInfo("King");
+        characterArray.get(0).setName("Austenberger");
+        characterArray.get(0).setInfo("Warrior - DnD");
 
         initList();
 
