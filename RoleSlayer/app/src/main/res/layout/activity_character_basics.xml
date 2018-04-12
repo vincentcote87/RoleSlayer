@@ -7,19 +7,43 @@ android:layout_height="match_parent"
 tools:context=".CharacterMainPage">
 
     <TextView
-        android:id="@+id/nameID"
+        android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/basicsHeader"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/nameLabel"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/nameInputID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/empty"
+        android:textAlignment="viewStart"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameLabelID"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 <!--<ImageView-->
     <!--android:id="@+id/imageView"-->
@@ -42,7 +66,7 @@ tools:context=".CharacterMainPage">
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameID" />
+        app:layout_constraintTop_toBottomOf="@+id/nameInputID" />
 
 <TextView
     android:id="@+id/raceInputID"
@@ -55,7 +79,7 @@ tools:context=".CharacterMainPage">
     android:textSize="30sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/raceLabelID"
-    app:layout_constraintTop_toBottomOf="@+id/nameID" />
+    app:layout_constraintTop_toBottomOf="@+id/nameInputID" />
 
     <TextView
         android:id="@+id/ageLabelID"
