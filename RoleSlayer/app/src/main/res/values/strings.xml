@@ -25,4 +25,5 @@
     <string name="itemDmg">Damage</string>
     <string name="itemWeight">Weight</string>
     <string name="itemDescription">Item Description</string>
+    <string name="deleteChar">Delete Character</string>
 </resources>

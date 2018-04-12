@@ -1,6 +1,8 @@
 package com.roleslayin.roleslayer;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ public class CharacterMainPage extends AppCompatActivity {
     Button advDisadvBtn;
     Button inventoryBtn;
     Button notesBtn;
+    Button deleteChar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class CharacterMainPage extends AppCompatActivity {
 //        advDisadvBtn = (Button)findViewById(R.id.advDisadvBtn);
         inventoryBtn = (Button)findViewById(R.id.inventoryBtn);
         notesBtn = (Button)findViewById(R.id.notesBtn);
+        deleteChar = (Button)findViewById(R.id.deleteCharBtn);
 
         basicsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +66,29 @@ public class CharacterMainPage extends AppCompatActivity {
                 Intent intent = new Intent(CharacterMainPage.this, CharacterNotesPage.class);
                 intent.putExtra("index", index);
                 startActivity(intent);
+            }
+        });
+
+        deleteChar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder confirm = new AlertDialog.Builder(CharacterMainPage.this).setTitle("Delete character?");
+                confirm.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                }).setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(CharacterMainPage.this, MainActivity.class);
+                        ((MyApplication)getApplicationContext()).characterArray.remove(((MyApplication)getApplicationContext()).characterArray.get(index));
+                        startActivity(intent);
+                    }
+                });
+                confirm.create();
+                confirm.show();
+
             }
         });
     }
