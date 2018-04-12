@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class CharacterMainPage extends AppCompatActivity {
 
+    private Integer index;
     protected Intent savedExtra;
     Button basicsBtn;
     Button statsBtn;
@@ -24,10 +25,11 @@ public class CharacterMainPage extends AppCompatActivity {
 
         //PASS PLAYERCHARACTER OBJECT
 //        String savedExtra = getIntent().getStringExtra("myChar");
-        savedExtra = getIntent();
-        PlayerCharacter playerChar = savedExtra.getParcelableExtra("myChar");
-        TextView myText = (TextView) findViewById(R.id.mainPageCharName);
-        myText.setText(playerChar.getName());
+//        savedExtra = getIntent();
+        index = getIntent().getIntExtra("index", 0);
+        setText();
+//        final PlayerCharacter playerChar = savedExtra.getParcelableExtra("myChar");
+
 
         basicsBtn = (Button)findViewById(R.id.basicsBtn);
         statsBtn = (Button)findViewById(R.id.statsBtn);
@@ -40,8 +42,28 @@ public class CharacterMainPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CharacterMainPage.this, CharacterBasics.class);
+                intent.putExtra("index", index);
                 startActivity(intent);
+
+//                passIntent(CharacterBasics.class, playerChar);
             }
         });
+    }
+
+    private void passIntent(Class x, PlayerCharacter pc) {
+        Intent intent = new Intent(CharacterMainPage.this, x);
+        intent.putExtra("myChar", pc);
+        startActivity(intent);
+    }
+
+    private void setText() {
+        TextView myText = (TextView) findViewById(R.id.mainPageCharName);
+        myText.setText(((MyApplication)this.getApplicationContext()).characterArray.get(index).getName());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setText();
     }
 }
