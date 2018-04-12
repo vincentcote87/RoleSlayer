@@ -29,7 +29,7 @@ public class EditField extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.layout_basics_fill, null);
 
         builder.setView(view)
-                .setTitle("Edit Field").setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setTitle("Enter value").setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
