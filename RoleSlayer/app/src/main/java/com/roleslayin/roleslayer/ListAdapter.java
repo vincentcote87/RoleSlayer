@@ -15,18 +15,15 @@ import java.util.ArrayList;
 public class ListAdapter extends ArrayAdapter {
 
     private final Activity context;
-//    private final String[] nameArray;
-//    private final String[] infoArray;
-    private final ArrayList<String> nameArray = new ArrayList<>();
-    private final ArrayList<String> infoArray = new ArrayList<>();
 
-    public ListAdapter(Activity context, ArrayList<String> nameArrayParam, ArrayList<String> infoArrayParam) {
-        super(context, R.layout.character_list_view, nameArrayParam);
+    private final ArrayList<PlayerCharacter> characterArray = new ArrayList<>();
+
+    public ListAdapter(Activity context, ArrayList<PlayerCharacter> characterArrayParam) {
+        super(context, R.layout.character_list_view, characterArrayParam);
 
         this.context = context;
 
-        this.nameArray.addAll(nameArrayParam);
-        this.infoArray.addAll(infoArrayParam);
+        this.characterArray.addAll(characterArrayParam);
     }
 
     public View getView(int position, View view, ViewGroup parent) {
@@ -38,8 +35,8 @@ public class ListAdapter extends ArrayAdapter {
         TextView inforTextField = (TextView)
                 rowView.findViewById(R.id.infoTextView);
 
-        nameTextField.setText(nameArray.get(position));
-        inforTextField.setText(infoArray.get(position));
+        nameTextField.setText(characterArray.get(position).getName());
+        inforTextField.setText(characterArray.get(position).getInfo());
 
         return rowView;
     };

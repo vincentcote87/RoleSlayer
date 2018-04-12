@@ -3,6 +3,7 @@
     package="com.roleslayin.roleslayer">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,7 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CharacterMainPage"></activity>
+        <activity android:name=".CharacterMainPage" />
+        <activity android:name=".CharacterBasics" />
+        <activity android:name=".CharacterInventoryPage" />
+        <activity android:name=".CharacterNotesPage"></activity>
     </application>
 
 </manifest>
