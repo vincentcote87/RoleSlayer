@@ -3,6 +3,7 @@
     <string name="addCharacterBtn">Add New</string>
     <string name="introTitle">Welcome to RoleSlayer</string>
     <string name="characterHeader">Your Characters:</string>
+    <string name="nameLabel">Name:</string>
     <string name="raceLabel">Race:</string>
     <string name="ageLabel">Age:</string>
     <string name="sexLabel">Sex:</string>
