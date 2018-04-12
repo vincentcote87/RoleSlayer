@@ -43,31 +43,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/basicsBtn" />
 
-    <Button
-        android:id="@+id/skillsBtn"
-        android:layout_width="0dp"
-        android:layout_height="55sp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/skillsHeader"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statsBtn" />
+    <!--<Button-->
+        <!--android:id="@+id/skillsBtn"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="55sp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="@string/skillsHeader"-->
+        <!--android:textSize="20sp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/statsBtn" />-->
 
-    <Button
-        android:id="@+id/advDisadvBtn"
-        android:layout_width="0dp"
-        android:layout_height="55sp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/advDisadHeader"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/skillsBtn" />
+    <!--<Button-->
+        <!--android:id="@+id/advDisadvBtn"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="55sp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="@string/advDisadHeader"-->
+        <!--android:textSize="20sp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/skillsBtn" />-->
 
     <Button
         android:id="@+id/inventoryBtn"
@@ -80,7 +80,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/advDisadvBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/statsBtn" />
+    <!--app:layout_constraintTop_toBottomOf="@+id/advDisadvBtn" />-->
 
     <Button
         android:id="@+id/notesBtn"

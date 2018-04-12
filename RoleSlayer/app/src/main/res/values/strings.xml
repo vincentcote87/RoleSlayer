@@ -10,7 +10,7 @@
     <string name="htLabel">HT:</string>
     <string name="wtLabel">WT:</string>
     <string name="descriptionLabel">Description:</string>
-    <string name="empty"></string>
+    <string name="empty"> </string>
     <string name="basicsHeader">Basics</string>
     <string name="statsHeader">Stats</string>
     <string name="skillsHeader">Skills</string>
@@ -20,4 +20,9 @@
     <string name="itemTypeLabel">Type:</string>
     <string name="itemDmgLabel">DMG:</string>
     <string name="itemWeightLabel">WGT:</string>
+    <string name="itemName">Item Name</string>
+    <string name="itemType">Item Type</string>
+    <string name="itemDmg">Damage</string>
+    <string name="itemWeight">Weight</string>
+    <string name="itemDescription">Item Description</string>
 </resources>

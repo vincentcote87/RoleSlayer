@@ -33,8 +33,8 @@ public class CharacterMainPage extends AppCompatActivity {
 
         basicsBtn = (Button)findViewById(R.id.basicsBtn);
         statsBtn = (Button)findViewById(R.id.statsBtn);
-        skillsBtn = (Button)findViewById(R.id.skillsBtn);
-        advDisadvBtn = (Button)findViewById(R.id.advDisadvBtn);
+//        skillsBtn = (Button)findViewById(R.id.skillsBtn);
+//        advDisadvBtn = (Button)findViewById(R.id.advDisadvBtn);
         inventoryBtn = (Button)findViewById(R.id.inventoryBtn);
         notesBtn = (Button)findViewById(R.id.notesBtn);
 

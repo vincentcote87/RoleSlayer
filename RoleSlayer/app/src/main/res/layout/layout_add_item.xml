@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/itemNameInputID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/itemName" />
+
+    <EditText
+        android:id="@+id/itemTypeInputID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/itemNameInputID"
+        android:hint="@string/itemType" />
+
+    <LinearLayout
+        android:id="@+id/intContainerLayoutView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/itemTypeInputID"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/itemDmgInputID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/itemDmg"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/itemWeightInputID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/itemWeight"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/itemDescriptionInputID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/intContainerLayoutView"
+        android:ems="10"
+        android:hint="@string/itemDescription"
+        android:inputType="text|textPersonName"
+        android:text="@string/empty" />
+
+</RelativeLayout>
