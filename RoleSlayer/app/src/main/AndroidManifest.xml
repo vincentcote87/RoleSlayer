@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CharacterMainPage" />
-        <activity android:name=".CharacterBasics"></activity>
+        <activity android:name=".CharacterBasics" />
+        <activity android:name=".CharacterInventoryPage"></activity>
     </application>
 
 </manifest>

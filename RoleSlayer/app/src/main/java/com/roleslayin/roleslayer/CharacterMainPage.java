@@ -44,8 +44,15 @@ public class CharacterMainPage extends AppCompatActivity {
                 Intent intent = new Intent(CharacterMainPage.this, CharacterBasics.class);
                 intent.putExtra("index", index);
                 startActivity(intent);
+            }
+        });
 
-//                passIntent(CharacterBasics.class, playerChar);
+        inventoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CharacterMainPage.this, CharacterInventoryPage.class);
+                intent.putExtra("index", index);
+                startActivity(intent);
             }
         });
     }

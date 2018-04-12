@@ -17,4 +17,7 @@
     <string name="advDisadHeader">Advantage/Disadvantage</string>
     <string name="inventoryHeader">Inventory</string>
     <string name="notesHeader">Notes</string>
+    <string name="itemTypeLabel">Type:</string>
+    <string name="itemDmgLabel">DMG:</string>
+    <string name="itemWeightLabel">WGT:</string>
 </resources>

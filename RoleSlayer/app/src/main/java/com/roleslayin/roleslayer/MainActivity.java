@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements EnterCharNameDial
         ((MyApplication)this.getApplicationContext()).characterArray.add(new PlayerCharacter());
         ((MyApplication)this.getApplicationContext()).characterArray.get(0).setName("Austenberger");
         ((MyApplication)this.getApplicationContext()).characterArray.get(0).setInfo("Warrior");
+        ((MyApplication)this.getApplicationContext()).characterArray.get(0).addItem(new CharacterItem(
+                "The Destroyer", "Kills things", "Weapon", 120, 15));
+        ((MyApplication)this.getApplicationContext()).characterArray.get(0).addItem(new CharacterItem(
+                "Postion of Swiftness", "Makes you swifty", "Potion", 0, 1));
 
         initList();
 

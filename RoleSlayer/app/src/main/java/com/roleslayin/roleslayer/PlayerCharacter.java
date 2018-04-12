@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.IOError;
+import java.util.ArrayList;
 
 public class PlayerCharacter implements Parcelable {
     String name = "";
@@ -19,6 +20,11 @@ public class PlayerCharacter implements Parcelable {
     Integer HT = 0;
     Integer WT = 0;
 
+    ArrayList<CharacterItem> inventory = new ArrayList<>();
+
+    public void addItem(CharacterItem x) {
+        inventory.add(x);
+    }
 
     @Override
     public int describeContents() {
