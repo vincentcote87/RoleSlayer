@@ -104,25 +104,25 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
             }
         });
 
-        basic_lift = findViewById(R.id.blInputID);
-
-        basic_move = findViewById(R.id.bmInputID);
-        basic_move.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                EditField bmField = new EditField();
-                bmField.show(getSupportFragmentManager(), "Edit basic move");
-                attribute = "bm";
-            }
-        });
-
-        basic_speed = findViewById(R.id.bsInputID);
-        basic_speed.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                EditField bsField = new EditField();
-                bsField.show(getSupportFragmentManager(), "Edit basic speed");
-                attribute = "bs";
-            }
-        });
+//        basic_lift = findViewById(R.id.blInputID);
+//
+//        basic_move = findViewById(R.id.bmInputID);
+//        basic_move.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                EditField bmField = new EditField();
+//                bmField.show(getSupportFragmentManager(), "Edit basic move");
+//                attribute = "bm";
+//            }
+//        });
+//
+//        basic_speed = findViewById(R.id.bsInputID);
+//        basic_speed.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                EditField bsField = new EditField();
+//                bsField.show(getSupportFragmentManager(), "Edit basic speed");
+//                attribute = "bs";
+//            }
+//        });
 //
 //        thrust = findViewById(R.id.thrustInputID);
 //        swing = findViewById(R.id.swingInputID);
@@ -207,11 +207,11 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setBasic_move(i);
                 break;
             case "bs":
-                Float f;
+                float f;
                 try {
                     f = Float.parseFloat(tmpStr);
                 } catch (NumberFormatException nfe) {
-                    f = null;
+                    f = 0;
                 }
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setBasic_speed(f);
                 break;
@@ -246,7 +246,7 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
         fpText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getFp().toString());
         blText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBasic_lift().toString());
         bmText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBasic_move().toString());
-        bsText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBasic_move().toString());
+        bsText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBasic_speed().toString());
         thrustText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getThrust());
         swingText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getSwing());
     }
