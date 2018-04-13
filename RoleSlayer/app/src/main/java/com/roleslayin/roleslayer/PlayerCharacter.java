@@ -17,21 +17,128 @@ public class PlayerCharacter implements Parcelable {
     private Integer age = 0;
     private String characterHeight = "0.0 ft";
     private String WT = "0 lbs";
-    private Integer st = 0;
-    private Integer dx = 0 ;
-    private Integer iq = 0;
-    private Integer ht = 0;
-    private Integer hp = 0;
+    private Integer st = 10;
+    private Integer dx = 10 ;
+    private Integer iq = 10;
+    private Integer ht = 10;
+    private Integer hp = 10;
     private Integer wil = 0;
     private Integer per = 0;
-    private Integer fp = 0;
+    private Integer fp = 10;
     private Integer basic_lift = 0;
     private Integer basic_move = 0;
-    private Float basic_speed = null;
+    private float basic_speed = 0;
     private String thrust = "";
     private String swing = "";
 
     ArrayList<CharacterItem> inventory = new ArrayList<>();
+
+    public PlayerCharacter() {
+        runCalcs();
+    }
+
+    private void runCalcs() {
+        calcDmg();
+        calcLift();
+        calcSpeed();
+    }
+
+    private void calcDmg()
+    {
+        switch(st)
+        {
+            case 1:
+                thrust = "1d-6";
+                swing = "1d-5";
+                break;
+            case 2:
+                thrust = "1d-6";
+                swing = "1d-5";
+                break;
+            case 3:
+                thrust = "1d-5";
+                swing = "1d-4";
+                break;
+            case 4:
+                thrust = "1d-5";
+                swing = "1d-4";
+                break;
+            case 5:
+                thrust = "1d-4";
+                swing = "1d-3";
+                break;
+            case 6:
+                thrust = "1d-4";
+                swing = "1d-3";
+                break;
+            case 7:
+                thrust = "1d-3";
+                swing = "1d-2";
+                break;
+            case 8:
+                thrust = "1d-3";
+                swing = "1d-2";
+                break;
+            case 9:
+                thrust = "1d-2";
+                swing = "1d-1";
+                break;
+            case 10:
+                thrust = "1d-2";
+                swing = "1d";
+                break;
+            case 11:
+                thrust = "1d-1";
+                swing = "1d+1";
+                break;
+            case 12:
+                thrust = "1d-1";
+                swing = "1d+2";
+                break;
+            case 13:
+                thrust = "1d";
+                swing = "2d-1";
+                break;
+            case 14:
+                thrust = "1d";
+                swing = "2d";
+                break;
+            case 15:
+                thrust = "1d+1";
+                swing = "2d+1";
+                break;
+            case 16:
+                thrust = "1d+1";
+                swing = "2d+2";
+                break;
+            case 17:
+                thrust = "1d+2";
+                swing = "3d-1";
+                break;
+            case 18:
+                thrust = "1d+2";
+                swing = "3d";
+                break;
+            case 19:
+                thrust = "2d-1";
+                swing = "3d+1";
+                break;
+            case 20:
+                thrust = "2d-1";
+                swing = "3d+2";
+                break;
+
+        }
+    }
+
+    private void calcLift() {
+        basic_lift = (st * st) / 5;
+    }
+
+    private void calcSpeed() {
+        basic_speed = (float)(dx + fp) /4;
+        basic_move = (int)basic_speed;
+    }
 
     public void addItem(CharacterItem x) {
         inventory.add(x);
@@ -113,7 +220,11 @@ public class PlayerCharacter implements Parcelable {
     }
 
     public void setSt(Integer st) {
+        int diff = st - this.st;
+//        build_points += diff * ST_PTS;
         this.st = st;
+//        setHp(this.st + diff);
+        runCalcs();
     }
 
     public Integer getDx() {
@@ -122,6 +233,7 @@ public class PlayerCharacter implements Parcelable {
 
     public void setDx(Integer dx) {
         this.dx = dx;
+        runCalcs();
     }
 
     public Integer getIq() {
@@ -170,6 +282,7 @@ public class PlayerCharacter implements Parcelable {
 
     public void setFp(Integer fp) {
         this.fp = fp;
+        runCalcs();
     }
 
     public Integer getBasic_lift() {
@@ -239,9 +352,6 @@ public class PlayerCharacter implements Parcelable {
             return new PlayerCharacter[size];
         }
     };
-
-    public PlayerCharacter() {
-    }
 
     private PlayerCharacter(Parcel in) {
 //        name = in.readString();
