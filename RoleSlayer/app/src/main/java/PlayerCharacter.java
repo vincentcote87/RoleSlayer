@@ -7,8 +7,7 @@ import java.util.ArrayList;
  * Created by vincentcote on 2018-03-26.
  */
 
-public class PlayerCharacter implements Parcelable
-{
+public class PlayerCharacter implements Parcelable {
     // Data Members
 
     // (build points)
@@ -21,8 +20,9 @@ public class PlayerCharacter implements Parcelable
 
     // Stats
     int st=10, dx=10, iq=10, ht=10, hp=10, wil=10, per=10, fp=10;
-    int basic_lift, basic_move;
-    float basic_speed;
+    int basic_lift;
+    float basic_speed = (dx + ht) / 4;
+    int basic_move = (int)basic_speed;
     String thrust, swing;
 
     // Perks/Quirks
@@ -44,7 +44,6 @@ public class PlayerCharacter implements Parcelable
     // Methods
 
     PlayerCharacter() {
-        calcSpeed();
         calcLift();
         calcDmg();
 
@@ -80,18 +79,12 @@ public class PlayerCharacter implements Parcelable
     PlayerCharacter(String n)
     {
         name = n;
-        calcSpeed();
         calcLift();
+        calcDmg();
 
     }
 
     // Helpers
-
-    private void calcSpeed()
-    {
-        basic_speed = (dx + ht) / 4;
-        basic_move = (int)basic_speed;
-    }
 
     private void calcLift()
     {
@@ -207,10 +200,11 @@ public class PlayerCharacter implements Parcelable
 
     void setDx(int score)
     {
-//        int diff = score - dx;
+        int diff = score - dx;
+        float sDiff = diff / 4;
 //        build_points += diff * DX_PTS;
         dx = score;
-        calcSpeed();
+        setBasic_speed(basic_speed + sDiff);
         calcSkills("dx", dx);
     }
 
@@ -227,9 +221,10 @@ public class PlayerCharacter implements Parcelable
     void setHt(int score)
     {
         int diff = score - ht;
+        float sDiff = diff / 4;
 //        build_points += diff * HT_PTS;
         ht = score;
-        calcSpeed();
+        setBasic_speed(basic_speed + sDiff);
         calcSkills("ht", ht);
         setFp(fp + diff);
     }
@@ -262,6 +257,21 @@ public class PlayerCharacter implements Parcelable
 //        int diff = score - fp;
 //        build_points += diff * FP_PTS;
         fp = score;
+    }
+
+    void setBasic_speed(float score)
+    {
+        if((int)score != (int)basic_speed)
+        {
+            int iDiff = (int)score - (int)basic_speed;
+            setBasic_move(basic_move + iDiff);
+        }
+        basic_speed = score;
+    }
+
+    void setBasic_move(int score)
+    {
+        basic_move = score;
     }
 
 /*    void addAdvantage(String name, int pts)
