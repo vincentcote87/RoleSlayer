@@ -274,7 +274,103 @@ public class PlayerCharacter implements Parcelable {
         basic_move = score;
     }
 
-/*    void addAdvantage(String name, int pts)
+    public String getName() {
+        return name;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getSt() {
+        return st;
+    }
+
+    public int getDx() {
+        return dx;
+    }
+
+    public int getIq() {
+        return iq;
+    }
+
+    public int getHt() {
+        return ht;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getWil() {
+        return wil;
+    }
+
+    public int getPer() {
+        return per;
+    }
+
+    public int getFp() {
+        return fp;
+    }
+
+    public int getBasic_lift() {
+        return basic_lift;
+    }
+
+    public float getBasic_speed() {
+        return basic_speed;
+    }
+
+    public int getBasic_move() {
+        return basic_move;
+    }
+
+    public String getThrust() {
+        return thrust;
+    }
+
+    public String getSwing() {
+        return swing;
+    }
+
+    public ArrayList<Skill> getSkills() {
+        return skills;
+    }
+
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public int getTotal_weight() {
+        return total_weight;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    /*    void addAdvantage(String name, int pts)
     {
 
     }
