@@ -7,7 +7,7 @@
     <string name="raceLabel">Race:</string>
     <string name="ageLabel">Age:</string>
     <string name="sexLabel">Sex:</string>
-    <string name="htLabel">HT:</string>
+    <string name="htLabel">characterHeight:</string>
     <string name="wtLabel">WT:</string>
     <string name="descriptionLabel">Description:</string>
     <string name="empty"> </string>
@@ -25,4 +25,5 @@
     <string name="itemDmg">Damage</string>
     <string name="itemWeight">Weight</string>
     <string name="itemDescription">Item Description</string>
+    <string name="deleteChar">Delete Character</string>
 </resources>

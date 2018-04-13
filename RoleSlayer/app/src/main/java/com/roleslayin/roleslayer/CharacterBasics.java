@@ -129,7 +129,7 @@ public class CharacterBasics extends AppCompatActivity implements EditField.Edit
                 } catch (NumberFormatException nfe) {
                     i = 0;
                 }
-                ((MyApplication) getApplicationContext()).characterArray.get(index).setHT(i);
+                ((MyApplication) getApplicationContext()).characterArray.get(index).setCharacterHeight(i);
                 break;
             case "WT":
                 try {
@@ -159,7 +159,7 @@ public class CharacterBasics extends AppCompatActivity implements EditField.Edit
         raceText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getRace());
         ageText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getAge().toString());
         sexText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getSex());
-        htText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getHT().toString());
+        htText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getCharacterHeight().toString());
         wtText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getWT().toString());
         descriptionText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getDescription());
     }
