@@ -124,20 +124,20 @@ public class CharacterBasics extends AppCompatActivity implements EditField.Edit
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setSex(tmpStr);
                 break;
             case "HT":
-                try {
-                    i = Integer.parseInt(tmpStr);
-                } catch (NumberFormatException nfe) {
-                    i = 0;
-                }
-                ((MyApplication) getApplicationContext()).characterArray.get(index).setCharacterHeight(i);
+//                try {
+//                    i = Integer.parseInt(tmpStr);
+//                } catch (NumberFormatException nfe) {
+//                    i = 0;
+//                }
+                ((MyApplication) getApplicationContext()).characterArray.get(index).setCharacterHeight(tmpStr);
                 break;
             case "WT":
-                try {
-                    i = Integer.parseInt(tmpStr);
-                } catch (NumberFormatException nfe) {
-                    i = 0;
-                }
-                ((MyApplication) getApplicationContext()).characterArray.get(index).setWT(i);
+//                try {
+//                    i = Integer.parseInt(tmpStr);
+//                } catch (NumberFormatException nfe) {
+//                    i = 0;
+//                }
+                ((MyApplication) getApplicationContext()).characterArray.get(index).setWT(tmpStr);
                 break;
             case "description":
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setDescription(tmpStr);
@@ -159,8 +159,8 @@ public class CharacterBasics extends AppCompatActivity implements EditField.Edit
         raceText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getRace());
         ageText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getAge().toString());
         sexText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getSex());
-        htText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getCharacterHeight().toString());
-        wtText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getWT().toString());
+        htText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getCharacterHeight());
+        wtText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getWT());
         descriptionText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getDescription());
     }
 

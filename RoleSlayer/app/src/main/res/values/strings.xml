@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">RoleSlayer</string>
-    <string name="addCharacterBtn">Add New</string>
+    <string name="addCharacterBtn">Add New Character</string>
+    <string name="addNewItem">Add Item</string>
     <string name="introTitle">Welcome to RoleSlayer</string>
-    <string name="characterHeader">Your Characters:</string>
+    <string name="characterHeader">Character List</string>
     <string name="nameLabel">Name:</string>
     <string name="raceLabel">Race:</string>
     <string name="ageLabel">Age:</string>
     <string name="sexLabel">Sex:</string>
-    <string name="heightLabel">HT:</string>
-    <string name="wtLabel">WT:</string>
+    <string name="heightLabel">Height:</string>
+    <string name="wtLabel">Weight:</string>
     <string name="descriptionLabel">Description:</string>
     <string name="empty"> </string>
     <string name="basicsHeader">Basics</string>

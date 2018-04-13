@@ -14,11 +14,9 @@ public class PlayerCharacter implements Parcelable {
     private String sex = "";
     private String description = "";
     private String playerNotes = "";
-
     private Integer age = 0;
-    private Integer characterHeight = 0;
-    private Integer WT = 0;
-
+    private String characterHeight = "0.0 ft";
+    private String WT = "0 lbs";
     private Integer st = 0;
     private Integer dx = 0 ;
     private Integer iq = 0;
@@ -33,57 +31,10 @@ public class PlayerCharacter implements Parcelable {
     private String thrust = "";
     private String swing = "";
 
-//    skills = new ArrayList<Skill>();
-//        in.readList(skills,null);
-//    inventory = new ArrayList<Item>();
-//in.readList(inventory, null);
-
     ArrayList<CharacterItem> inventory = new ArrayList<>();
 
     public void addItem(CharacterItem x) {
         inventory.add(x);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(name);
-        parcel.writeString(info);
-        parcel.writeString(race);
-        parcel.writeString(sex);
-        parcel.writeString(description);
-        parcel.writeInt(age);
-        parcel.writeInt(characterHeight);
-        parcel.writeInt(WT);
-
-    }
-
-    public static final Parcelable.Creator<PlayerCharacter> CREATOR = new Parcelable.Creator<PlayerCharacter>() {
-        public PlayerCharacter createFromParcel(Parcel in) {
-            return new PlayerCharacter(in);
-        }
-
-        public PlayerCharacter[] newArray(int size) {
-            return new PlayerCharacter[size];
-        }
-    };
-
-    public PlayerCharacter() {
-    }
-
-    private PlayerCharacter(Parcel in) {
-        name = in.readString();
-        info = in.readString();
-        race = in.readString();
-        sex = in.readString();
-        description = in.readString();
-        age = in.readInt();
-        characterHeight = in.readInt();
-        WT = in.readInt();
     }
 
     public void setName(String name) {
@@ -134,19 +85,19 @@ public class PlayerCharacter implements Parcelable {
         this.age = age;
     }
 
-    public Integer getCharacterHeight() {
+    public String getCharacterHeight() {
         return characterHeight;
     }
 
-    public void setCharacterHeight(Integer characterHeight) {
+    public void setCharacterHeight(String characterHeight) {
         this.characterHeight = characterHeight;
     }
 
-    public Integer getWT() {
+    public String getWT() {
         return WT;
     }
 
-    public void setWT(Integer WT) {
+    public void setWT(String WT) {
         this.WT = WT;
     }
 
@@ -259,6 +210,48 @@ public class PlayerCharacter implements Parcelable {
 
     public void setSwing(String swing) {
         this.swing = swing;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+//        parcel.writeString(name);
+//        parcel.writeString(info);
+//        parcel.writeString(race);
+//        parcel.writeString(sex);
+//        parcel.writeString(description);
+//        parcel.writeInt(age);
+//        parcel.writeInt(characterHeight);
+//        parcel.writeInt(WT);
+
+    }
+
+    public static final Parcelable.Creator<PlayerCharacter> CREATOR = new Parcelable.Creator<PlayerCharacter>() {
+        public PlayerCharacter createFromParcel(Parcel in) {
+            return new PlayerCharacter(in);
+        }
+
+        public PlayerCharacter[] newArray(int size) {
+            return new PlayerCharacter[size];
+        }
+    };
+
+    public PlayerCharacter() {
+    }
+
+    private PlayerCharacter(Parcel in) {
+//        name = in.readString();
+//        info = in.readString();
+//        race = in.readString();
+//        sex = in.readString();
+//        description = in.readString();
+//        age = in.readInt();
+//        characterHeight = in.readInt();
+//        WT = in.readInt();
     }
 }
 
