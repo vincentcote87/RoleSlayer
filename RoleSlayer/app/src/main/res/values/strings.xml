@@ -7,7 +7,7 @@
     <string name="raceLabel">Race:</string>
     <string name="ageLabel">Age:</string>
     <string name="sexLabel">Sex:</string>
-    <string name="htLabel">characterHeight:</string>
+    <string name="heightLabel">HT:</string>
     <string name="wtLabel">WT:</string>
     <string name="descriptionLabel">Description:</string>
     <string name="empty"> </string>
@@ -26,4 +26,19 @@
     <string name="itemWeight">Weight</string>
     <string name="itemDescription">Item Description</string>
     <string name="deleteChar">Delete Character</string>
+
+    <string name="stLabel">ST:</string>
+    <string name="dxLabel">DX:</string>
+    <string name="iqLabel">IQ:</string>
+    <string name="htLabel">HT:</string>
+    <string name="hpLabel">HP:</string>
+    <string name="wilLabel">WIL:</string>
+    <string name="perLabel">PER:</string>
+    <string name="fpLabel">FP:</string>
+    <string name="bsLabel">Basic Speed</string>
+    <string name="bmLabel">Basic Move</string>
+    <string name="blLabel">Basic Lift</string>
+    <string name="thrustLabel">Thrust</string>
+    <string name="swingLabel">Swing</string>
+    <string name="damageLabel">Damage:</string>
 </resources>
