@@ -131,7 +131,7 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
 
     public void passText(String field) {
         tmpStr = field;
-        Integer i;
+        int i;
         switch (attribute) {
             case "st":
                 try {
@@ -243,8 +243,8 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
         perText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getPer().toString());
         fpText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getFp().toString());
         blText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBl().toString());
-        bmText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBm().toString());
-        bsText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBs().toString());
+        bmText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBasic_move().toString());
+        bsText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getBasic_move().toString());
         thrustText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getThrust());
         swingText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getSwing());
     }
