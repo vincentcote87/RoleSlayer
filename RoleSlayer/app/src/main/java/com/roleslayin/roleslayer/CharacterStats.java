@@ -207,11 +207,11 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setBasic_move(i);
                 break;
             case "bs":
-                Float f;
+                float f;
                 try {
                     f = Float.parseFloat(tmpStr);
                 } catch (NumberFormatException nfe) {
-                    f = null;
+                    f = 0;
                 }
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setBasic_speed(f);
                 break;
