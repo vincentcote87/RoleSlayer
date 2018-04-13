@@ -23,7 +23,6 @@ public class ListAdapter extends ArrayAdapter {
 
         this.context = context;
 
-
         this.characterArray.addAll(characterArrayParam);
     }
 

@@ -3,7 +3,6 @@ package com.roleslayin.roleslayer;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.IOError;
 import java.util.ArrayList;
 
 public class PlayerCharacter implements Parcelable {
@@ -17,7 +16,7 @@ public class PlayerCharacter implements Parcelable {
     private String playerNotes = "";
 
     private Integer age = 0;
-    private Integer HT = 0;
+    private Integer characterHeight = 0;
     private Integer WT = 0;
 
     ArrayList<CharacterItem> inventory = new ArrayList<>();
@@ -39,7 +38,7 @@ public class PlayerCharacter implements Parcelable {
         parcel.writeString(sex);
         parcel.writeString(description);
         parcel.writeInt(age);
-        parcel.writeInt(HT);
+        parcel.writeInt(characterHeight);
         parcel.writeInt(WT);
 
     }
@@ -64,7 +63,7 @@ public class PlayerCharacter implements Parcelable {
         sex = in.readString();
         description = in.readString();
         age = in.readInt();
-        HT = in.readInt();
+        characterHeight = in.readInt();
         WT = in.readInt();
     }
 
@@ -116,12 +115,12 @@ public class PlayerCharacter implements Parcelable {
         this.age = age;
     }
 
-    public Integer getHT() {
-        return HT;
+    public Integer getCharacterHeight() {
+        return characterHeight;
     }
 
-    public void setHT(Integer HT) {
-        this.HT = HT;
+    public void setCharacterHeight(Integer characterHeight) {
+        this.characterHeight = characterHeight;
     }
 
     public Integer getWT() {
