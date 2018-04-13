@@ -16,10 +16,6 @@ public class EditField extends AppCompatDialogFragment {
 
     private EditText defaultField;
     private EditFieldListener listener;
-    private Bundle myArgs = getArguments();
-//    private String defaultHeader = myArgs.getString("header_id");
-
-//    String nn = myArgs.getString("header_id");
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

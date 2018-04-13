@@ -17,8 +17,8 @@ public class CharacterInventoryPage extends AppCompatActivity implements AddItem
     private Integer index;
     private ListView listView;
     private Button addNew;
-    private Button deleteItem;
-    private ListView listview;
+//    private Button deleteItem;
+//    private ListView listview;
 
 
     @Override
@@ -57,19 +57,8 @@ public class CharacterInventoryPage extends AppCompatActivity implements AddItem
                 });
                 confirm.create();
                 confirm.show();
-
-//                removeItem(position);
             }
         });
-
-
-//        deleteItem = findViewById(R.id.deleteItemFromListBtn);
-//        deleteItem.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
     }
 
     public void removeItem(int position) {

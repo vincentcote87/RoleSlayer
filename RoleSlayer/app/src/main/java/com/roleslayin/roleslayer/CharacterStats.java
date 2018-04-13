@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class CharacterStats extends AppCompatActivity implements EditField.EditFieldListener {
-//
+
     private TextView st;
     private TextView dx;
     private TextView iq;
@@ -16,11 +16,9 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
     private TextView wil;
     private TextView per;
     private TextView fp;
-    private TextView basic_lift;
-    private TextView basic_move;
-    private TextView basic_speed;
-//    private TextView thrust;
-//    private TextView swing;
+//    private TextView basic_lift;
+//    private TextView basic_move;
+//    private TextView basic_speed;
     private Integer index;
     private String tmpStr;
     private String attribute;
@@ -103,32 +101,8 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
                 attribute = "fp";
             }
         });
-
-//        basic_lift = findViewById(R.id.blInputID);
-//
-//        basic_move = findViewById(R.id.bmInputID);
-//        basic_move.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                EditField bmField = new EditField();
-//                bmField.show(getSupportFragmentManager(), "Edit basic move");
-//                attribute = "bm";
-//            }
-//        });
-//
-//        basic_speed = findViewById(R.id.bsInputID);
-//        basic_speed.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                EditField bsField = new EditField();
-//                bsField.show(getSupportFragmentManager(), "Edit basic speed");
-//                attribute = "bs";
-//            }
-//        });
-//
-//        thrust = findViewById(R.id.thrustInputID);
-//        swing = findViewById(R.id.swingInputID);
-//
     }
-//
+
     @Override
     public void passText(String field) {
         tmpStr = field;
@@ -250,11 +224,11 @@ public class CharacterStats extends AppCompatActivity implements EditField.EditF
         thrustText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getThrust());
         swingText.setText(((MyApplication) this.getApplicationContext()).characterArray.get(index).getSwing());
     }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        setText();
-//    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setText();
+    }
 
 }
