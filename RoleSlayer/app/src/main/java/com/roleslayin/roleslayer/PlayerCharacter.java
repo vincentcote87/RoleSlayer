@@ -20,18 +20,18 @@ public class PlayerCharacter implements Parcelable {
     private Integer WT = 0;
 
     private Integer st = 0;
-    private Integer dx;
-    private Integer iq;
-    private Integer ht;
-    private Integer hp;
-    private Integer wil;
-    private Integer per;
-    private Integer fp;
-    private Integer basic_lift;
-    private Integer basic_move;
-    private Float basic_speed;
-    private String thrust;
-    private String swing;
+    private Integer dx = 0 ;
+    private Integer iq = 0;
+    private Integer ht = 0;
+    private Integer hp = 0;
+    private Integer wil = 0;
+    private Integer per = 0;
+    private Integer fp = 0;
+    private Integer basic_lift = 0;
+    private Integer basic_move = 0;
+    private Float basic_speed = null;
+    private String thrust = "";
+    private String swing = "";
 
 //    skills = new ArrayList<Skill>();
 //        in.readList(skills,null);

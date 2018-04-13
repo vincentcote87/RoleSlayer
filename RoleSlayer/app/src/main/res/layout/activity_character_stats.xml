@@ -10,12 +10,15 @@
         android:id="@+id/fpLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/fpLabel"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/perLabelID"
-        tools:layout_editor_absoluteX="180dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perLabelID" />
 
     <TextView
         android:id="@+id/statsHeaderID"
@@ -37,18 +40,23 @@
         android:id="@+id/damageHeaderID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
         android:text="@string/damageLabel"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="338dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bsLabelID" />
 
     <TextView
         android:id="@+id/stLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/stLabel"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -57,14 +65,18 @@
 
     <TextView
         android:id="@+id/stInputID"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/empty"
         android:textAlignment="viewStart"
         android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/hpLabelID"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/stLabelID"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintTop_toBottomOf="@+id/statsHeaderID" />
 
     <!--<ImageView-->
     <!--android:id="@+id/imageView"-->
@@ -81,46 +93,38 @@
         android:id="@+id/dxLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/dxLabel"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintTop_toBottomOf="@+id/stLabelID" />
 
     <TextView
         android:id="@+id/dxInputID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/empty"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintEnd_toStartOf="@+id/wilLabelID"
+        app:layout_constraintStart_toEndOf="@+id/dxLabelID"
+        app:layout_constraintTop_toBottomOf="@+id/stInputID" />
 
     <TextView
         android:id="@+id/iqLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/iqLabel"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="149dp" />
-
-    <TextView
-        android:id="@+id/iqInputID"
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/empty"
-        android:textAlignment="viewStart"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/perLabelID"
-        app:layout_constraintStart_toEndOf="@+id/iqLabelID"
-        app:layout_constraintTop_toBottomOf="@+id/dxInputID" />
+        app:layout_constraintTop_toBottomOf="@+id/dxLabelID" />
 
     <TextView
         android:id="@+id/htLabelID"
@@ -137,7 +141,7 @@
     <TextView
         android:id="@+id/htInputID"
         android:layout_width="0dp"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -152,31 +156,45 @@
         android:id="@+id/hpLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/hpLabel"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsHeaderID" />
 
     <TextView
         android:id="@+id/hpInputID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/empty"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/hpLabelID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/hpLabelID"
+        app:layout_constraintTop_toBottomOf="@+id/statsHeaderID" />
 
     <TextView
         android:id="@+id/wilLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/wilLabel"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/hpLabelID"
-        tools:layout_editor_absoluteX="180dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hpLabelID" />
 
     <TextView
         android:id="@+id/wilInputID"
@@ -184,28 +202,32 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/empty"
         android:textAlignment="viewStart"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/wilLabelID"
-        tools:layout_editor_absoluteY="100dp" />
+        app:layout_constraintTop_toBottomOf="@+id/hpLabelID" />
 
     <TextView
         android:id="@+id/fpInputID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/empty"
         android:textAlignment="viewStart"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fpLabelID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/fpLabelID"
-        app:layout_constraintTop_toBottomOf="@+id/perInputID" />
+        app:layout_constraintTop_toBottomOf="@+id/perInputID"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/perInputID"
@@ -226,12 +248,15 @@
         android:id="@+id/perLabelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/perLabel"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/wilLabelID"
-        tools:layout_editor_absoluteX="180dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wilLabelID" />
 
     <TextView
         android:id="@+id/descriptionInputID"
@@ -252,10 +277,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="@string/blLabel"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/bsLabelID"
-        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/htLabelID" />
 
@@ -267,11 +292,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="@string/bmLabel"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bsLabelID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bsLabelID"
-        app:layout_constraintTop_toBottomOf="@+id/fpInputID" />
+        app:layout_constraintTop_toBottomOf="@+id/fpLabelID"
+        app:layout_constraintVertical_bias="0.93" />
 
     <TextView
         android:id="@+id/bsLabelID"
@@ -281,6 +309,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="@string/bsLabel"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -319,7 +348,7 @@
 
     <TextView
         android:id="@+id/thrustInputID"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -349,7 +378,7 @@
 
     <TextView
         android:id="@+id/swingInputID"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -364,7 +393,7 @@
 
     <TextView
         android:id="@+id/swingLabelID"
-        android:layout_width="49dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="80dp"
         android:layout_marginTop="8dp"
@@ -386,4 +415,542 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/damageHeaderID" />
 
+    <TextView
+        android:id="@+id/iqInputID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/empty"
+        android:textAlignment="viewStart"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/perLabelID"
+        app:layout_constraintStart_toEndOf="@+id/iqLabelID"
+        app:layout_constraintTop_toBottomOf="@+id/dxInputID" />
+
 </android.support.constraint.ConstraintLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".CharacterMainPage">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/statsHeaderID"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="@string/statsHeader"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TableLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/tableLayout2"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/tableLayout"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/statsHeaderID"-->
+            <!--app:layout_constraintVertical_bias="0.0">-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/stLabelID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:text="@string/stLabel"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/statsHeaderID" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/stInputID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/stLabelID"-->
+                    <!--tools:layout_editor_absoluteY="51dp" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/dxLabelID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="16dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/dxLabel"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--tools:layout_editor_absoluteY="454dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/dxInputID"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textSize="30sp"-->
+                    <!--tools:layout_editor_absoluteX="134dp"-->
+                    <!--tools:layout_editor_absoluteY="454dp" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/iqLabelID"-->
+                    <!--android:layout_width="16dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/iqLabel"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--tools:layout_editor_absoluteY="149dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/iqInputID"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--app:layout_constraintEnd_toStartOf="@+id/perLabelID"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/iqLabelID"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/dxInputID" />-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/htLabelID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/heightLabel"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/iqLabelID" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/htInputID"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="41dp"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--app:layout_constraintEnd_toStartOf="@+id/fpLabelID"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/htLabelID"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/iqInputID" />-->
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
+
+        <!--<TableLayout-->
+            <!--android:id="@+id/tableLayout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/statsHeaderID">-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/hpLabelID"-->
+                    <!--android:layout_width="79dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/hpLabel"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/stLabelID" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/hpInputID"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textSize="30sp"-->
+                    <!--tools:layout_editor_absoluteX="238dp"-->
+                    <!--tools:layout_editor_absoluteY="51dp" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/wilLabelID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/wilLabel"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--tools:layout_editor_absoluteX="180dp"-->
+                    <!--tools:layout_editor_absoluteY="157dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/wilInputID"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintHorizontal_bias="1.0"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/wilLabelID"-->
+                    <!--tools:layout_editor_absoluteY="100dp" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/perLabelID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:text="@string/perLabel"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/wilLabelID"-->
+                    <!--tools:layout_editor_absoluteX="180dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/perInputID"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintHorizontal_bias="0.0"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/perLabelID"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/wilInputID" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/fpLabelID"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:text="@string/fpLabel"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/perLabelID"-->
+                    <!--tools:layout_editor_absoluteX="180dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/fpInputID"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:text="@string/empty"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:textSize="30sp"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintHorizontal_bias="0.0"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/fpLabelID"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/perInputID" />-->
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/imageView"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="35dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="33dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:scaleType="fitXY"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="@+id/nameID"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="@+id/nameID"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srcCompat="@android:drawable/ic_menu_edit" />&ndash;&gt;-->
+
+    <!--<TableLayout-->
+        <!--android:id="@+id/tableLayout2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="101dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tableLayout">-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/blLabelID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="@string/blLabel"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/bsLabelID"-->
+                <!--app:layout_constraintHorizontal_bias="0.46"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/htLabelID" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/blInputID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/empty"-->
+                <!--android:textAlignment="viewStart"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/blLabelID"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/blLabelID"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/blLabelID" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/bsLabelID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="@string/bsLabel"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/fpLabelID" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/bsInputID"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/empty"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/bsLabelID"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/bsLabelID"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/bsLabelID" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/bmLabelID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="@string/bmLabel"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/bsLabelID"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/fpInputID" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/bmInputID"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/empty"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/bmLabelID"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/bmLabelID"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/bmLabelID" />-->
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+    <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tableLayout2">-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/damageHeaderID"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/damageLabel"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold"-->
+                <!--tools:layout_editor_absoluteX="8dp"-->
+                <!--tools:layout_editor_absoluteY="338dp" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/thrustLabelID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="80dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/thrustLabel"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/damageHeaderID" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/thrustInputID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/empty"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/thrustLabelID"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/thrustLabelID"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/thrustLabelID" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/swingLabelID"-->
+                <!--android:layout_width="49dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="80dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/swingLabel"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/damageHeaderID" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/swingInputID"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/empty"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="24sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/swingLabelID"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/swingLabelID"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/swingLabelID" />-->
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/descriptionInputID"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:text="@string/empty"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--</android.support.constraint.ConstraintLayout>-->
