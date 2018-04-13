@@ -22,8 +22,8 @@ public class PlayerCharacter implements Parcelable {
     private Integer iq = 10;
     private Integer ht = 10;
     private Integer hp = 10;
-    private Integer wil = 0;
-    private Integer per = 0;
+    private Integer wil = 10;
+    private Integer per = 10;
     private Integer fp = 10;
     private Integer basic_lift = 0;
     private Integer basic_move = 0;
@@ -241,7 +241,11 @@ public class PlayerCharacter implements Parcelable {
     }
 
     public void setIq(Integer iq) {
+        int diff = iq - this.iq;
+        setWil(wil + diff);
+        setPer(per + diff);
         this.iq = iq;
+        runCalcs();
     }
 
     public Integer getHt() {
@@ -249,6 +253,8 @@ public class PlayerCharacter implements Parcelable {
     }
 
     public void setHt(Integer ht) {
+        int diff = ht - this.ht;
+        setFp(fp + diff);
         this.ht = ht;
         runCalcs();
     }
