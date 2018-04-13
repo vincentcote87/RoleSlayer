@@ -26,7 +26,6 @@ public class CharacterItem {
         this.itemWeight = itemWeight;
     }
 
-
     public String getItemName() {
         return itemName;
     }

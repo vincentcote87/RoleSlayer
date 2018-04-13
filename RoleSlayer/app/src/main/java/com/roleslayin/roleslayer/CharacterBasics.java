@@ -124,19 +124,9 @@ public class CharacterBasics extends AppCompatActivity implements EditField.Edit
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setSex(tmpStr);
                 break;
             case "HT":
-//                try {
-//                    i = Integer.parseInt(tmpStr);
-//                } catch (NumberFormatException nfe) {
-//                    i = 0;
-//                }
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setCharacterHeight(tmpStr);
                 break;
             case "WT":
-//                try {
-//                    i = Integer.parseInt(tmpStr);
-//                } catch (NumberFormatException nfe) {
-//                    i = 0;
-//                }
                 ((MyApplication) getApplicationContext()).characterArray.get(index).setWT(tmpStr);
                 break;
             case "description":
