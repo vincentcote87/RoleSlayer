@@ -21,7 +21,8 @@
         <activity android:name=".CharacterBasics" />
         <activity android:name=".CharacterInventoryPage" />
         <activity android:name=".CharacterNotesPage" />
-        <activity android:name=".CharacterStats"></activity>
+        <activity android:name=".CharacterStats" android:exported="true">
+        </activity>
     </application>
 
 </manifest>
