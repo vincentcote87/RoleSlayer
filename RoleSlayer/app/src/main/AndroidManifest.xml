@@ -20,7 +20,8 @@
         <activity android:name=".CharacterMainPage" />
         <activity android:name=".CharacterBasics" />
         <activity android:name=".CharacterInventoryPage" />
-        <activity android:name=".CharacterNotesPage"></activity>
+        <activity android:name=".CharacterNotesPage" />
+        <activity android:name=".CharacterStats"></activity>
     </application>
 
 </manifest>

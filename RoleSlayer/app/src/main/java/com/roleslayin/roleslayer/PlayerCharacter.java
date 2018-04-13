@@ -19,6 +19,25 @@ public class PlayerCharacter implements Parcelable {
     private Integer characterHeight = 0;
     private Integer WT = 0;
 
+    private Integer st = 0;
+    private Integer dx = 0 ;
+    private Integer iq = 0;
+    private Integer ht = 0;
+    private Integer hp = 0;
+    private Integer wil = 0;
+    private Integer per = 0;
+    private Integer fp = 0;
+    private Integer basic_lift = 0;
+    private Integer basic_move = 0;
+    private Float basic_speed = null;
+    private String thrust = "";
+    private String swing = "";
+
+//    skills = new ArrayList<Skill>();
+//        in.readList(skills,null);
+//    inventory = new ArrayList<Item>();
+//in.readList(inventory, null);
+
     ArrayList<CharacterItem> inventory = new ArrayList<>();
 
     public void addItem(CharacterItem x) {
@@ -137,6 +156,109 @@ public class PlayerCharacter implements Parcelable {
 
     public void setPlayerNotes(String playerNotes) {
         this.playerNotes = playerNotes;
+    }
+    public Integer getSt() {
+        return st;
+    }
+
+    public void setSt(Integer st) {
+        this.st = st;
+    }
+
+    public Integer getDx() {
+        return dx;
+    }
+
+    public void setDx(Integer dx) {
+        this.dx = dx;
+    }
+
+    public Integer getIq() {
+        return iq;
+    }
+
+    public void setIq(Integer iq) {
+        this.iq = iq;
+    }
+
+    public Integer getHt() {
+        return ht;
+    }
+
+    public void setHt(Integer ht) {
+        this.ht = ht;
+    }
+
+    public Integer getHp() {
+        return hp;
+    }
+
+    public void setHp(Integer hp) {
+        this.hp = hp;
+    }
+
+    public Integer getWil() {
+        return wil;
+    }
+
+    public void setWil(Integer wil) {
+        this.wil = wil;
+    }
+
+    public Integer getPer() {
+        return per;
+    }
+
+    public void setPer(Integer per) {
+        this.per = per;
+    }
+
+    public Integer getFp() {
+        return fp;
+    }
+
+    public void setFp(Integer fp) {
+        this.fp = fp;
+    }
+
+    public Integer getBasic_lift() {
+        return basic_lift;
+    }
+
+    public void setBasic_lift(Integer basic_lift) {
+        this.basic_lift = basic_lift;
+    }
+
+    public Integer getBasic_move() {
+        return basic_move;
+    }
+
+    public void setBasic_move(Integer basic_move) {
+        this.basic_move = basic_move;
+    }
+
+    public Float getBasic_speed() {
+        return basic_speed;
+    }
+
+    public void setBasic_speed(Float basic_speed) {
+        this.basic_speed = basic_speed;
+    }
+
+    public String getThrust() {
+        return thrust;
+    }
+
+    public void setThrust(String thrust) {
+        this.thrust = thrust;
+    }
+
+    public String getSwing() {
+        return swing;
+    }
+
+    public void setSwing(String swing) {
+        this.swing = swing;
     }
 }
 

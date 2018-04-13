@@ -51,6 +51,15 @@ public class CharacterMainPage extends AppCompatActivity {
             }
         });
 
+        statsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CharacterMainPage.this, CharacterStats.class);
+                intent.putExtra("index", index);
+                startActivity(intent);
+            }
+        });
+
         inventoryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
