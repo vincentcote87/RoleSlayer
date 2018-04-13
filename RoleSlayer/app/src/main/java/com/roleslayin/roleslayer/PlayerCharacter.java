@@ -24,6 +24,7 @@ public class PlayerCharacter implements Parcelable {
     int basic_move = (int)basic_speed;
     String thrust, swing;
 
+
     // Perks/Quirks
 //    ArrayList<String> advantages, disadvantages;
 
@@ -183,6 +184,7 @@ public class PlayerCharacter implements Parcelable {
                 break;
 
         }
+
     }
 
     // Setters
@@ -323,6 +325,7 @@ public class PlayerCharacter implements Parcelable {
 
     public int getBasic_move() {
         return basic_move;
+
     }
 
     public String getThrust() {
@@ -456,6 +459,12 @@ public class PlayerCharacter implements Parcelable {
     public void setPlayerNotes(String playerNotes) {
         this.playerNotes = playerNotes;
     }
+
+    public void setSwing(String swing) {
+        this.swing = swing;
+    }
+
+
 
 }
 
