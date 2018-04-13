@@ -136,7 +136,7 @@ public class PlayerCharacter implements Parcelable {
     }
 
     private void calcSpeed() {
-        basic_speed = (float)(dx + fp) /4;
+        basic_speed = (float)(dx + ht) /4;
         basic_move = (int)basic_speed;
     }
 
@@ -223,7 +223,7 @@ public class PlayerCharacter implements Parcelable {
         int diff = st - this.st;
 //        build_points += diff * ST_PTS;
         this.st = st;
-//        setHp(this.st + diff);
+        setHp(hp + diff);
         runCalcs();
     }
 
@@ -250,6 +250,7 @@ public class PlayerCharacter implements Parcelable {
 
     public void setHt(Integer ht) {
         this.ht = ht;
+        runCalcs();
     }
 
     public Integer getHp() {
