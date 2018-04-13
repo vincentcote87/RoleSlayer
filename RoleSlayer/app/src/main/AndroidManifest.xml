@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".CharacterMainPage" />
         <activity android:name=".CharacterBasics"></activity>
+        <activity android:name=".CharacterStats"></activity>
     </application>
 
 </manifest>
